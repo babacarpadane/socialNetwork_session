@@ -1,3 +1,4 @@
+
 <%@ page language="java" contentType="text/html; charset=ISO-8859-1"
     pageEncoding="ISO-8859-1"%>
 <!DOCTYPE html>
@@ -15,14 +16,16 @@
       Username: <input type="text" name="username"><br>
       Password: <input type="text" name="password"><br><br>
       <p align="center"><strong>Dati personali:</strong></p><br>
-      Nome: <input type="text" name="name"><br>
-      Cognome: <input type="text" name="surname"><br>
+      Nome:     <input type="text" name="name"><br>
+      Cognome:  <input type="text" name="surname"><br>
       Nickname: <input type="text" name="nickname"><br>
-      e-mail: <input type="text" name="e-mail"><br><br>
+      e-mail:   <input type="text" name="e-mail"><br><br>
       
       <p align="center"><input type="submit" name="send" value="Crea il tuo profilo">
       <input type="submit" name="reset" value="Reimposta" formaction=""></p>
       </form>
+      
+      
       <!--
       Riepilogo dati account:<br>
       Username: ${parametre_username}<br>
