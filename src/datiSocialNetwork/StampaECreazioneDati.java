@@ -45,7 +45,11 @@ public class StampaECreazioneDati extends HttpServlet {
                 profilo.setUsername(request.getParameter("username"));
                 profilo.setPassword(request.getParameter("password"));
                 profilo.setCodice(s);
-                profilo.setProprietario(persona);     
+                profilo.setProprietario(persona);   
+                
+        //aggiungo l'account appena creato alla lista
+        ListaAccountUtenti listDaStampare= new ListaAccountUtenti();
+        listDaStampare.lista.add(profilo);
 		     
 		//request.getRequestDispatcher("htmlSocialNetwork.jsp").forward(request, response);
         //PrintStream stream= new PrintStream(System.out);

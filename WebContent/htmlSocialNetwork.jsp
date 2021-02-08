@@ -10,7 +10,7 @@
 <body>
       <h1 align="center"><strong>Benvenuto</strong></h1>
       
-      <form action="stampaecreazione" method="Get">
+      <form method="Get">
       Scegli il tuo account ed inserisci i tuoi dati personali:<br><br>
       <p align="center"><strong>Account:</strong></p><br>
       Username: <input type="text" name="username"><br>
@@ -21,8 +21,9 @@
       Nickname: <input type="text" name="nickname"><br>
       e-mail:   <input type="text" name="e-mail"><br><br>
       
-      <p align="center"><input type="submit" name="send" value="Crea il tuo profilo">
-      <input type="submit" name="reset" value="Reimposta" formaction=""></p>
+      <p align="center">
+      <input type="submit" name="send" value="Crea il tuo profilo" formaction="stampaecreazione">
+      <input type="submit" name="reset" value="Reimposta" formaction="Reimposta"></p>
       </form>
       
       
