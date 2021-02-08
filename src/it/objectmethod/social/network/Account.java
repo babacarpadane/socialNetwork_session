@@ -1,14 +1,10 @@
-package datiSocialNetwork;
+package it.objectmethod.social.network;
 
 public class Account {
-	String username;
-	String password;
-	char[] codice;
-	Utente proprietario;
-
-	public Account() {
-		
-	}
+	private String username;
+	private String password;
+	private char[] codice;
+	private Utente proprietario;
 	
 	public String getUsername() {
 		return username;
@@ -39,5 +35,10 @@ public class Account {
 		this.codice = c;
 	}
 	
+	@Override
+	public String toString() {
+		return "Account [username=" + username + ", password=" + password + ", codice=" + String.valueOf(codice)
+				+ ", proprietario=" + proprietario + "]\r\r\n";
+	}
 
 }

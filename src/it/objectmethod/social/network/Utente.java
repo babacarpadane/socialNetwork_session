@@ -1,15 +1,11 @@
-package datiSocialNetwork;
+package it.objectmethod.social.network;
 
 public class Utente {
 	
-    String nome;
-    String cognome;
-    String soprannome;
-    String email;
-	
-    public Utente() {
-		
-	}
+    private String nome;
+    private String cognome;
+    private String soprannome;
+    private String email;
 
 	public String getNome() {
 		return nome;
@@ -41,6 +37,11 @@ public class Utente {
 
 	public void setEmail(String email) {
 		this.email = email;
+	}
+	
+	@Override
+	public String toString() {
+		return  cognome + " " + nome;
 	}
     
    
