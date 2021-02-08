@@ -20,11 +20,12 @@
       Cognome:  <input type="text" name="surname"><br>
       Nickname: <input type="text" name="nickname"><br>
       e-mail:   <input type="text" name="e-mail"><br><br>
-      
-      <p align="center">
       <input type="submit" name="send" value="Crea il tuo profilo" formaction="stampaecreazione">
-      <input type="submit" name="reset" value="Reimposta" formaction="Reimposta"></p>
       </form>
+      <form action="cambioDati.jsp"><input type="submit" name="reset" value="Reimposta" formaction="cambioDati"></form>
+  
+      
+      
       
       
       <!--
@@ -39,7 +40,5 @@
       Password: ${parametre_email}<br>-->
       
       
-      
-
 </body>
 </html>

@@ -12,4 +12,13 @@
   <url-pattern>/stampaecreazione</url-pattern>
   </servlet-mapping>
   
+  <servlet>
+          <servlet-name>reimposta</servlet-name>
+          <servlet-class>datiSocialNetwork.Reimposta</servlet-class>
+  </servlet>
+  <servlet-mapping>
+  <servlet-name>reimposta</servlet-name>
+  <url-pattern>/reimposta</url-pattern>
+  </servlet-mapping>
+  
 </web-app>

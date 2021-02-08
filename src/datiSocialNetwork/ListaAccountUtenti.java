@@ -10,4 +10,9 @@ public class ListaAccountUtenti {
 		return lista;
 	}
 
+	@Override
+	public String toString() {
+		return "Lista degli account utenti: " + lista;
+	}
+
 }
