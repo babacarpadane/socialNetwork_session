@@ -5,16 +5,19 @@ public class Account {
 	private String password;
 	private char[] codice;
 	private Utente proprietario;
-	
+
 	public String getUsername() {
 		return username;
 	}
+
 	public void setUsername(String username) {
 		this.username = username;
 	}
+
 	public String getPassword() {
 		return password;
 	}
+
 	public void setPassword(String password) {
 		this.password = password;
 	}
@@ -26,7 +29,7 @@ public class Account {
 	public void setProprietario(Utente proprietario) {
 		this.proprietario = proprietario;
 	}
-	
+
 	public char[] getCodice() {
 		return codice;
 	}
@@ -34,7 +37,7 @@ public class Account {
 	public void setCodice(char[] c) {
 		this.codice = c;
 	}
-	
+
 	@Override
 	public String toString() {
 		return "Account [username=" + username + ", password=" + password + ", codice=" + String.valueOf(codice)

@@ -67,31 +67,38 @@ public class StampaECreazioneDati extends HttpServlet {
 
 		Account e = new Account();
 		Utente eu = new Utente();
-		// try {
+
 		e.setUsername(request.getParameter("usernameSicurezza"));
 		e.setPassword(request.getParameter("passwordSicurezza"));
 		eu.setNome(request.getParameter("nameModificato"));
 		eu.setCognome(request.getParameter("surnameModificato"));
 		eu.setSoprannome(request.getParameter("nicknameModificato"));
 		eu.setEmail(request.getParameter("e-mailModificato"));
-		// } catch (Exception p) {
-		// TODO: handle exception
-		// }
 
 		for (int i = 0; i < listaProfili.size(); i++) {
 			if (listaProfili.get(i).getUsername().equals(e.getUsername())
 					&& listaProfili.get(i).getPassword().equals(e.getPassword())) {
 				// se sono tutti e due V allora l'account è presente in memoria
-				if (eu.getNome() != null) {
+				if ("".equals(eu.getNome())) {
+
+				} else {
 					listaProfili.get(i).getProprietario().setNome(eu.getNome());
+					listaProfili.get(i).getProprietario().setCognome(listaProfili.get(i).getProprietario().getCognome());
 				}
-				if (eu.getCognome() != null) {
+				if ("".equals(eu.getCognome())) {
+
+				} else {
 					listaProfili.get(i).getProprietario().setCognome(eu.getCognome());
+					listaProfili.get(i).getProprietario().setNome(listaProfili.get(i).getProprietario().getNome());
 				}
-				if (eu.getSoprannome() != null) {
+				if ("".equals(eu.getSoprannome())) {
+
+				} else {
 					listaProfili.get(i).getProprietario().setSoprannome(eu.getSoprannome());
 				}
-				if (eu.getEmail() != null) {
+				if ("".equals(eu.getEmail())) {
+
+				} else {
 					listaProfili.get(i).getProprietario().setEmail(eu.getEmail());
 				}
 			}
