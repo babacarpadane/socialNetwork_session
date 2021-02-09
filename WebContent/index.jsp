@@ -13,32 +13,32 @@
 	</h1>
 
 	<form method="Get">
-		Scegli il tuo account ed inserisci i tuoi dati personali:<br>
-		<br>
+		Scegli il tuo account ed inserisci i tuoi dati personali:<br> <br>
 		<p align="center">
 			<strong>Account:</strong>
 		</p>
 		<br> Username: <input type="text" name="username"><br>
-		Password: <input type="password" name="password"><br>
-		<br>
+		Password: <input type="password" name="password"><br> <br>
 		<p align="center">
-			<strong>Dati personali:</strong>
+			<strong>Inserisci i tuoi dati personali; se vuoi modificare
+				i dati di un account già esistente, allora inserisci solo i dati che
+				vuoi modificare:</strong>
 		</p>
 		<br> Nome: <input type="text" name="name"><br>
 		Cognome: <input type="text" name="surname"><br> Nickname:
 		<input type="text" name="nickname"><br> e-mail: <input
-			type="email" name="e-mail"><br>
-		<br>
+			type="email" name="e-mail"><br> <br>
 		<p align="center">
 			<input type="submit" name="send" value="Crea il tuo profilo"
-				formaction="stampaecreazione">
-			<input type="submit" name="reset" value="Reimposta dati"
-				formaction="reimposta">
+				formaction="stampaecreazione"> <input type="submit"
+				name="reset" value="Reimposta dati" formaction="reimposta">
 	</form>
 
-	Creato account numero ${numeroAccount} associato a: ${nome} ${cognome}<br><br>
-    Account presenti nel server: ${lista}<br>
-	
+	Creato account numero ${numeroAccount} associato a: ${nome} ${cognome}
+	<br>
+	<br> Account presenti nel server: ${lista}
+	<br>
+
 
 
 	<!--
