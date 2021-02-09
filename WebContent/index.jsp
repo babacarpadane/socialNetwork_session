@@ -32,12 +32,8 @@
 		<p align="center">
 			<input type="submit" name="send" value="Crea il tuo profilo"
 				formaction="stampaecreazione">
-	</form>
-
-	<form action="cambioDati.jsp">
-		<p align="center">
 			<input type="submit" name="reset" value="Reimposta dati"
-				formaction="confermaSicurezza.jsp">
+				formaction="reimposta">
 	</form>
 
 	Creato account numero ${numeroAccount} associato a: ${nome} ${cognome}<br><br>

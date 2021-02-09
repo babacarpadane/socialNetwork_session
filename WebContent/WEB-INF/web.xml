@@ -3,15 +3,24 @@
 	xmlns="http://xmlns.jcp.org/xml/ns/javaee"
 	xsi:schemaLocation="http://xmlns.jcp.org/xml/ns/javaee http://xmlns.jcp.org/xml/ns/javaee/web-app_4_0.xsd"
 	id="WebApp_ID" version="4.0">
-	<display-name>it.objectmethod.social.network</display-name>
+	<display-name>it.objectmethod.socialnetwork.session</display-name>
 
 	<servlet>
 		<servlet-name>stampa</servlet-name>
-		<servlet-class>it.objectmethod.social.network.StampaECreazioneDati</servlet-class>
+		<servlet-class>it.objectmethod.socialnetwork.session.StampaECreazioneDati</servlet-class>
 	</servlet>
 	<servlet-mapping>
 		<servlet-name>stampa</servlet-name>
 		<url-pattern>/stampaecreazione</url-pattern>
+	</servlet-mapping>
+	
+	<servlet>
+		<servlet-name>reimposta</servlet-name>
+		<servlet-class>it.objectmethod.socialnetwork.session.Reimposta</servlet-class>
+	</servlet>
+	<servlet-mapping>
+		<servlet-name>reimposta</servlet-name>
+		<url-pattern>/reimposta</url-pattern>
 	</servlet-mapping>
 
 </web-app>

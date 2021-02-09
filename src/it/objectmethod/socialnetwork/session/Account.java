@@ -1,4 +1,4 @@
-package it.objectmethod.social.network;
+package it.objectmethod.socialnetwork.session;
 
 public class Account {
 	private String username;

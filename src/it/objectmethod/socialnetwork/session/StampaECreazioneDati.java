@@ -1,4 +1,4 @@
-package it.objectmethod.social.network;
+package it.objectmethod.socialnetwork.session;
 
 import java.io.IOException;
 import java.util.ArrayList;
@@ -9,6 +9,7 @@ import javax.servlet.ServletException;
 import javax.servlet.http.HttpServlet;
 import javax.servlet.http.HttpServletRequest;
 import javax.servlet.http.HttpServletResponse;
+import javax.servlet.http.HttpSession;
 
 public class StampaECreazioneDati extends HttpServlet {
 	private static final long serialVersionUID = 1L;
@@ -36,16 +37,27 @@ public class StampaECreazioneDati extends HttpServlet {
 			s[2] = car[rand.nextInt(25)];
 			s[3] = num[rand.nextInt(9)];
 			s[4] = num[rand.nextInt(9)];
-		} while (false);
+		} while (false); 
+		//fine creazione codice alfanumerico
 
 		Account profilo = new Account();
 		profilo.setUsername(request.getParameter("username"));
 		profilo.setPassword(request.getParameter("password"));
 		profilo.setCodice(s);
 		profilo.setProprietario(persona);
-
+		
 		// aggiungo l'account appena creato alla lista
 		listaProfili.add(profilo);
+		
+        HttpSession session=request.getSession();
+		session.setAttribute("tuttiprofili", listaProfili);
+		/*session.setAttribute("user", profilo.getUsername());
+		session.setAttribute("pass", profilo.getPassword());
+		session.setAttribute("nom", profilo.getProprietario().getNome());
+		session.setAttribute("cogn", profilo.getProprietario().getCognome());
+		session.setAttribute("nick", profilo.getProprietario().getSoprannome());
+		session.setAttribute("ema", profilo.getProprietario().getEmail());*/
+
 
 		request.setAttribute("numeroAccount", String.valueOf(profilo.getCodice()));
 		request.setAttribute("nome", profilo.getProprietario().getNome());
@@ -53,17 +65,19 @@ public class StampaECreazioneDati extends HttpServlet {
 		request.setAttribute("lista", listaProfili.toString());
 		request.getRequestDispatcher("index.jsp").forward(request, response);
 
-		// PrintStream stream= new PrintStream(System.out);
 		/*
-		 * response.getWriter() .write("\r\r\n" + listaProfili.toString());
+		 * PrintStream stream= new PrintStream(System.out); response.getWriter()
+		 * .write("\r\r\n" + listaProfili.toString());
 		 */
 
 	}
 
-	protected void doPost(HttpServletRequest request, HttpServletResponse response)
+	/*protected void doPost(HttpServletRequest request, HttpServletResponse response)
 			throws ServletException, IOException {
-		// controllo che l'emai e la password inseriti corrispondano ad un account
-		// esistente
+		/*
+		 * controllo che l'emai e la password inseriti corrispondano ad un account
+		 * esistente
+		 
 
 		Account e = new Account();
 		Utente eu = new Utente();
@@ -83,7 +97,8 @@ public class StampaECreazioneDati extends HttpServlet {
 
 				} else {
 					listaProfili.get(i).getProprietario().setNome(eu.getNome());
-					listaProfili.get(i).getProprietario().setCognome(listaProfili.get(i).getProprietario().getCognome());
+					listaProfili.get(i).getProprietario()
+							.setCognome(listaProfili.get(i).getProprietario().getCognome());
 				}
 				if ("".equals(eu.getCognome())) {
 
@@ -107,6 +122,6 @@ public class StampaECreazioneDati extends HttpServlet {
 		request.setAttribute("tour", listaProfili.toString());
 		request.getRequestDispatcher("confermaSicurezza.jsp").forward(request, response);
 
-	}
+	}*/
 
 }
